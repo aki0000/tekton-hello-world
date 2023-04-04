@@ -11,3 +11,9 @@ spec:
     - name: hello
       taskRef:
         name: hello
+    - name: goodbye
+      taskRef:
+        name: goodbye
+      params:
+      - name: username
+        value: ${params.username}
