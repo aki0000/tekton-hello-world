@@ -1,13 +1,13 @@
 ---
 apiVersion: triggers.tekton.dev/v1beta1
-kind: Trigger
+kind: TriggerBinding
 metadata:
-  name: push-trigger
+  name: pipeline-binding
 spec:
-  bindings:
+  params:
   - name: gitrevision
     value: $(body.head_commit.id)
   - name: gitrepositoryurl
     value: $(body.repository.url)
-  template:
-    ref: git-clone-template
+  - name: contenttype
+    value: $(header.Content-Type)
