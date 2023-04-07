@@ -10,4 +10,4 @@ spec:
   - name: gitrepositoryurl
     value: $(body.repository.url)
   template:
-    ref: git-clone-template
+    ref: pipeline-template

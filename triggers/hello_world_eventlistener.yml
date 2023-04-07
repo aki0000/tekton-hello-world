@@ -5,20 +5,8 @@ metadata:
   name: eventlistener
 spec:
   serviceAccountName: "tekton-triggers-example-sa"
-  triggerGroups:
-  - name: github-pr-group
-    interceptors:
-    - name: "validate GitHub payload and filter on eventType"
-      ref:
-        name: "github"
-      params:
-      - name: "secretRef"
-        value:
-          secretName: github-secret
-          secretKey: secretToken
-      - name: "eventTypes"
-        value: ["pull_request"]
-    triggerSelector:
-      labelSelector:
-        matchLabels:
-          type: github-pr
+  triggers:
+  - bindings:
+    - ref: pipeline-binding
+    template:
+      ref: pipeline-template
