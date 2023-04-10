@@ -1,6 +1,8 @@
 # tekton-hello-world
  This repogistry builts tekton pipeline and trigger with hello world. It can be deployed below command lines.
 
+![Pipeline Image](images/pipeline.png)
+
 ```
 kubectl apply -f pipelines/
 
