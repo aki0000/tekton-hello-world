@@ -2,12 +2,10 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: Trigger
 metadata:
-  name: push-trigger
+  name: hellow-world-pipeline-trigger
 spec:
   bindings:
-  - name: gitrevision
-    value: $(body.head_commit.id)
-  - name: gitrepositoryurl
-    value: $(body.repository.url)
+  - name: username
+    value: $(body.username)
   template:
-    ref: pipeline-template
+    ref: hellow-world-pipeline-template
