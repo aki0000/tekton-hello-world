@@ -2,7 +2,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
 metadata:
-  name: pipeline-template
+  name: phellow-world-ipeline-template
 spec:
   params:
   - name: gitrevision
@@ -12,10 +12,10 @@ spec:
   - apiVersion: tekton.dev/v1beta1
     kind: PipelineRun
     metadata:
-      generateName: hello-goodbye-run-
+      generateName: hello-world-run-
     spec:
       pipelineRef:
-        name: hello-goodbye
+        name: hello-world
       params:
       - name: username
         value: $(params.username)

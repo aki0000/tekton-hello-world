@@ -2,11 +2,11 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
-  name: eventlistener
+  name: hellow-world-eventlistener
 spec:
   serviceAccountName: "tekton-triggers-example-sa"
   triggers:
   - bindings:
-    - ref: pipeline-binding
+    - ref: hellow-world-pipeline-binding
     template:
-      ref: pipeline-template
+      ref: hellow-world-pipeline-template

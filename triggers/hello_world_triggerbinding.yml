@@ -2,7 +2,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
-  name: pipeline-binding
+  name: hellow-world-pipeline-binding
 spec:
   params:
   - name: username
