@@ -2,7 +2,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: hello-world-run
+  generateName: hello-world-run-
 spec:
   pipelineRef:
     name: hello-world
