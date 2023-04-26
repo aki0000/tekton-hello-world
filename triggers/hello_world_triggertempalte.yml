@@ -2,7 +2,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
 metadata:
-  name: phellow-world-ipeline-template
+  name: hellow-world-ipeline-template
 spec:
   params:
   - name: gitrevision
